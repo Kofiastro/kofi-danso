@@ -16,7 +16,7 @@ const sofia = Sofia({
 
 export default function page() {
   return (
-    <div className=' flex flex-col h-dvh justify-center mx-5 md:justify-start md:mx-[50px] my-32'>
+    <div className=' flex flex-col justify-center mx-5 md:justify-start md:mx-[50px] my-20'>
       {/* Image and Navigation section  */}
       <div className='flex flex-row space-x-[30px]'>
         <Image
