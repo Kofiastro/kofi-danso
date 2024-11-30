@@ -23,6 +23,7 @@ export default function page() {
           src='/bioP.jpg'
           width={97}
           height={97}
+          alt='Profile'
           className='rounded-full shadow-sm outline  size-16 md:size-24 outline-slate-200'
         />
         {/* Icons socials */}
