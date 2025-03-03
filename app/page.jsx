@@ -4,6 +4,7 @@ import {
   FaGithub,
   FaLinkedin,
   FaArrowUpRightFromSquare,
+  FaSpotify,
 } from 'react-icons/fa6';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 import { Sofia } from 'next/font/google';
@@ -46,13 +47,13 @@ export default function page() {
                 </a>
               </li>
               <li>
-                <a href='http://' target='_blank' rel='noopener noreferrer'>
+                <a href='https://www.linkedin.com/in/kofi-dansoo/' target='_blank' rel='noopener noreferrer'>
                   <FaLinkedin className='hover:text-blue-500' />
                 </a>
               </li>
               <li>
-                <a href='http://' target='_blank' rel='noopener noreferrer'>
-                  <FaInstagram className='hover:text-rose-400' />
+                <a href='https://open.spotify.com/user/htvri0jwrxhdqsuczyjclh8ul?si=9659e5648a114e8b' target='_blank' rel='noopener noreferrer'>
+                  <FaSpotify className='hover:text-rose-400' />
                 </a>
               </li>
             </ul>
