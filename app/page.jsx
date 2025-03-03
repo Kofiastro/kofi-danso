@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   FaInstagram,
-  FaSpotify,
+  FaGithub,
   FaLinkedin,
   FaArrowUpRightFromSquare,
 } from 'react-icons/fa6';
@@ -38,11 +38,11 @@ export default function page() {
              
               <li>
                 <a
-                  href='https://open.spotify.com/user/htvri0jwrxhdqsuczyjclh8ul?si=c7cdceb683ed4f1d'
+                  href='https://github.com/Kofiastro'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  <FaSpotify className='hover:text-green-500' />
+                  <FaGithub className='hover:text-green-500' />
                 </a>
               </li>
               <li>
@@ -154,6 +154,22 @@ export default function page() {
               <p className='text-slate-500'>
                 Frontend Mentor offers invaluable real-world web development
                 challenges, sharpening my HTML, CSS, and JavaScript skills
+              </p>
+            </div>
+             {/* Project Four */}
+             <div className='py-2'>
+              <div className='flex flex-row items-center justify-between '>
+                <h1 className='text-lg text-slate-800'>Vercel Clone</h1>
+                <a
+                  href='https://vercelclone-eight.vercel.app/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <FaArrowUpRightFromSquare className='hover:text-slate-800 hover:transition-all hover:duration-700' />
+                </a>
+              </div>
+              <p className='text-slate-500'>
+                Official vercel website clone
               </p>
             </div>
           </div>
