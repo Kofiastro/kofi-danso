@@ -35,25 +35,36 @@ export default function page() {
               <a href='#projects' className='hover:text-slate-500'>
                 <li>Projects</li>
               </a>
-              <a href='#contact' className='hover:text-slate-500'> <li>Contact</li></a>
-             
+              <a href='#contact' className='hover:text-slate-500'>
+                {' '}
+                <li>Contact</li>
+              </a>
+
               <li>
                 <a
                   href='https://github.com/Kofiastro'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  <FaGithub className='hover:text-green-500' />
+                  <FaGithub className='hover:text-rose-400' />
                 </a>
               </li>
               <li>
-                <a href='https://www.linkedin.com/in/kofi-dansoo/' target='_blank' rel='noopener noreferrer'>
+                <a
+                  href='https://www.linkedin.com/in/kofi-dansoo/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
                   <FaLinkedin className='hover:text-blue-500' />
                 </a>
               </li>
               <li>
-                <a href='https://open.spotify.com/user/htvri0jwrxhdqsuczyjclh8ul?si=9659e5648a114e8b' target='_blank' rel='noopener noreferrer'>
-                  <FaSpotify className='hover:text-rose-400' />
+                <a
+                  href='https://open.spotify.com/user/htvri0jwrxhdqsuczyjclh8ul?si=9659e5648a114e8b'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <FaSpotify className=' hover:text-green-500' />
                 </a>
               </li>
             </ul>
@@ -86,17 +97,18 @@ export default function page() {
           </p>
         </div>
 
-        <button
+        <a
+          href='mailto:astrokofi@gmail.com'
+          rel='noopener noreferrer'
           id='contact'
-          className='rounded-full px-4 py-2 my-4 bg-slate-800 flex shadow-md items-center text-slate-50 transition-all hover:bg-slate-700  hover:duration-500'
+          className='rounded-full w-1/4 px-4 py-2 my-4 bg-slate-800 flex shadow-md items-center text-slate-50 transition-all hover:bg-slate-700  hover:duration-500'
         >
-          Email me{' '}
+          Email me
           <span>
             <MdKeyboardArrowRight />
           </span>
-        </button>
+        </a>
         {/* Projects section */}
-
         <div
           id='projects'
           className=' flex flex-col md:flex-row space-y-4 py-4 md:space-x-8'
@@ -157,8 +169,8 @@ export default function page() {
                 challenges, sharpening my HTML, CSS, and JavaScript skills
               </p>
             </div>
-             {/* Project Four */}
-             <div className='py-2'>
+            {/* Project Four */}
+            <div className='py-2'>
               <div className='flex flex-row items-center justify-between '>
                 <h1 className='text-lg text-slate-800'>Vercel Clone</h1>
                 <a
@@ -169,15 +181,13 @@ export default function page() {
                   <FaArrowUpRightFromSquare className='hover:text-slate-800 hover:transition-all hover:duration-700' />
                 </a>
               </div>
-              <p className='text-slate-500'>
-                Official vercel website clone
-              </p>
+              <p className='text-slate-500'>Official vercel website clone</p>
             </div>
           </div>
         </div>
       </div>
       <footer>
-        <h1 className='text-slate-500 test-xl my-4'>ⓒ 2024 6lacktech </h1>
+        <h1 className='text-slate-500 test-xl my-4'>ⓒ 2025 Kofi Danso </h1>
       </footer>
     </div>
   );
