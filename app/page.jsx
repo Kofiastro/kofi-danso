@@ -76,7 +76,7 @@ export default function page() {
         <div className='space-y-2 '>
           <p>
             I’m Kofi Danso Amakye, a Software Engineer and Designer based in
-            Accra, Ghana 🇬🇭, with expertise in frontend development.
+            Accra, Ghana 🇬🇭, with expertise in Software development.
           </p>
           <p>
             I specialize in crafting custom websites, blending design and
@@ -109,6 +109,7 @@ export default function page() {
           </span>
         </a>
         {/* Projects section */}
+
         <div
           id='projects'
           className=' flex flex-col md:flex-row space-y-4 py-4 md:space-x-8'
