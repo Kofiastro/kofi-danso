@@ -98,14 +98,23 @@ const capabilities = [
   },
 ];
 
-const stack = [
-  'JavaScript',
-  'React',
-  'Next.js',
-  'HTML & CSS',
-  'Tailwind CSS',
-  'Figma',
-  'Git & GitHub',
+const stackGroups = [
+  {
+    title: 'Software & Web',
+    technologies: ['JavaScript', 'React', 'Next.js', 'HTML & CSS', 'Tailwind CSS'],
+  },
+  {
+    title: 'Data & Business Reporting',
+    technologies: ['Microsoft Power BI', 'Microsoft Excel', 'Data analysis and reporting', 'Credit-risk analysis'],
+  },
+  {
+    title: 'IT Infrastructure & Networking',
+    technologies: ['Windows environments', 'Linux environments', 'Network configuration and troubleshooting', 'Routers, switches, and Wi-Fi infrastructure', 'Structured cabling and connectivity'],
+  },
+  {
+    title: 'Systems & Delivery',
+    technologies: ['Git', 'GitHub', 'Vercel', 'Figma', 'Technical documentation'],
+  },
 ];
 
 function ExternalLink({ href }) {
@@ -319,11 +328,18 @@ export default function Page() {
         <section className='grid gap-10 border-t border-slate-200 py-16 md:grid-cols-[0.7fr_1.3fr]'>
           <div>
             <p className='section-kicker'>Technology stack</p>
-            <h2 className='mt-2 text-2xl font-semibold tracking-[-0.03em] text-slate-950'>Tools I use to make things work.</h2>
+            <h2 className='mt-2 text-2xl font-semibold tracking-[-0.03em] text-slate-950'>Business-minded tools for building, connecting, and improving technology.</h2>
           </div>
-          <div className='flex flex-wrap content-start gap-2'>
-            {stack.map((technology) => (
-              <span key={technology} className='rounded-full border border-slate-200 px-4 py-2 text-sm text-slate-600'>{technology}</span>
+          <div className='grid gap-6 sm:grid-cols-2'>
+            {stackGroups.map((group) => (
+              <div key={group.title}>
+                <h3 className='font-mono text-xs uppercase tracking-[0.16em] text-cyan-700'>{group.title}</h3>
+                <div className='mt-3 flex flex-wrap gap-2'>
+                  {group.technologies.map((technology) => (
+                    <span key={technology} className='rounded-full border border-slate-200 px-4 py-2 text-sm text-slate-600'>{technology}</span>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </section>
