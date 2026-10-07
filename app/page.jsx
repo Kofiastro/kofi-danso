@@ -241,7 +241,7 @@ export default function Page() {
               <p className='section-kicker'>Partners &amp; clients</p>
               <h2 className='mt-2 text-2xl font-semibold tracking-[-0.03em] text-slate-950'>Built around real collaboration.</h2>
             </div>
-            <p className='max-w-sm text-sm leading-6 text-slate-500 md:text-right'>Logo files are not currently included in this project. This area is reserved for verified partner or client marks.</p>
+            <p className='max-w-sm text-sm leading-6 text-slate-500 md:text-right'>This section highlights selected partnerships and client work. Verified brand assets will be added as they become available.</p>
           </div>
           <div className='mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4'>
             <a
