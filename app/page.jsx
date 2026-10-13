@@ -18,13 +18,16 @@ const emailHref = `mailto:${contact.email}?subject=${encodeURIComponent(
 )}&body=${encodeURIComponent(
   'Hello Kofi,\n\nI would like to discuss a project with you.\n\n',
 )}`;
+const whatsappHref = `https://wa.me/${contact.whatsapp}?text=${encodeURIComponent(
+  'Hello Kofi, I would like to discuss a project with you.',
+)}`;
 
 const projects = [
   {
     name: '6lackTech',
     type: 'Technology solutions',
     description:
-      'A technology agency combining web design and development with financial advisory solutions.',
+      'A technology agency focused on web design, web development, and practical technology solutions.',
     href: 'https://www.6lacktech.com/',
   },
   {
@@ -69,11 +72,57 @@ const projects = [
     href: '#contact',
   },
   {
+    name: 'Billing system with captive portal',
+    type: 'Networking & access management',
+    description:
+      'A managed access solution combining billing workflows with a captive portal for controlled network access and user management.',
+    href: '#contact',
+  },
+  {
     name: 'Credit risk analysis',
     type: 'Power BI & Excel',
     description:
       'A credit-risk project using Power BI and Excel to work with risk data, analysis, and reporting.',
     href: '#contact',
+  },
+];
+
+const githubProjects = [
+  {
+    name: 'Journal Starter',
+    repo: 'journal-starter',
+    description: 'A starter project for practicing Python and API skills while building a useful journaling workflow.',
+    language: 'Python',
+  },
+  {
+    name: 'Networking Lab',
+    repo: 'networking-lab',
+    description: 'A hands-on lab for building practical networking skills through guided exercises and experiments.',
+    language: 'Shell',
+  },
+  {
+    name: 'Linux CTFs',
+    repo: 'linux-ctfs',
+    description: 'A collection of Linux capture-the-flag challenges for practicing command-line and systems skills.',
+    language: 'Linux',
+  },
+  {
+    name: 'AWS Terraform Capstone',
+    repo: 'Capstone-AWS-Terraform-2Tier-N-A',
+    description: 'A secure two-tier AWS cloud architecture designed and provisioned with Terraform.',
+    language: 'HCL',
+  },
+  {
+    name: 'Vercel Clone',
+    repo: 'vercelclone',
+    description: 'A frontend recreation of the Vercel experience, focused on layout, interaction, and polish.',
+    language: 'TypeScript',
+  },
+  {
+    name: 'Devjobs Web App',
+    repo: 'Devjobs-Web-app',
+    description: 'A responsive job listings interface built to practice product UI development and filtering.',
+    language: 'JavaScript',
   },
 ];
 
@@ -143,6 +192,9 @@ export default function Page() {
             <a href='#work' className='transition hover:text-slate-950'>
               Work
             </a>
+            <a href='#github' className='transition hover:text-slate-950'>
+              GitHub
+            </a>
             <a href='#about' className='transition hover:text-slate-950'>
               About
             </a>
@@ -165,10 +217,10 @@ export default function Page() {
             </p>
             <div className='mt-9 flex flex-wrap items-center gap-4'>
               <a
-                href={emailHref}
+                href={whatsappHref}
                 target='_blank'
                 rel='noopener noreferrer'
-                aria-label='Email Kofi about a project'
+                aria-label='Message Kofi on WhatsApp about a project'
                 className='inline-flex items-center gap-2 rounded-full bg-slate-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-cyan-700'
               >
                 Let&apos;s work together <MdKeyboardArrowRight className='text-lg' />
@@ -222,7 +274,7 @@ export default function Page() {
             </div>
             <div className='mt-12 grid gap-10 md:grid-cols-[1fr_0.8fr]'>
               <p className='max-w-2xl text-xl leading-8 text-slate-300'>
-                Leading the technology direction of a Ghana-based agency focused on web design, web development, and financial advisory solutions.
+                Leading the technology direction of a Ghana-based agency focused on web design, web development, and practical technology solutions.
               </p>
               <div className='border-l border-white/20 pl-5 text-sm leading-6 text-slate-400'>
                 <p className='text-slate-200'>A case study in progress</p>
@@ -308,7 +360,7 @@ export default function Page() {
               <p className='section-kicker'>Selected work</p>
               <h2 className='mt-2 text-3xl font-semibold tracking-[-0.04em] text-slate-950'>Projects, experiments, and shipped ideas.</h2>
             </div>
-            <span className='hidden font-mono text-xs text-slate-400 sm:block'>08 / selected</span>
+            <span className='hidden font-mono text-xs text-slate-400 sm:block'>06 / selected</span>
           </div>
           <div className='divide-y divide-slate-200 border-y border-slate-200'>
             {projects.map((project, index) => (
@@ -321,6 +373,40 @@ export default function Page() {
                 </div>
                 <ExternalLink href={project.href} />
               </article>
+            ))}
+          </div>
+        </section>
+
+        <section id='github' className='border-t border-slate-200 py-20'>
+          <div className='flex flex-col gap-5 md:flex-row md:items-end md:justify-between'>
+            <div>
+              <p className='section-kicker'>Pinned on GitHub</p>
+              <h2 className='mt-2 max-w-2xl text-3xl font-semibold tracking-[-0.04em] text-slate-950'>More of my work on GitHub.</h2>
+              <p className='mt-3 max-w-xl text-sm leading-6 text-slate-500'>A selection of pinned projects covering software, cloud infrastructure, networking, and systems practice.</p>
+            </div>
+            <a href='https://github.com/Kofiastro' target='_blank' rel='noopener noreferrer' className='inline-flex w-fit items-center gap-2 rounded-full bg-slate-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-cyan-700'>
+              <FaGithub /> View profile
+            </a>
+          </div>
+          <div className='mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+            {githubProjects.map((project, index) => (
+              <a
+                key={project.repo}
+                href={`https://github.com/Kofiastro/${project.repo}`}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='group rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-1 hover:border-cyan-500 hover:shadow-lg'
+              >
+                <div className='flex items-center justify-between gap-3'>
+                  <span className='font-mono text-[10px] uppercase tracking-[0.16em] text-cyan-700'>{project.language}</span>
+                  <span className='font-mono text-xs text-slate-400'>0{index + 1}</span>
+                </div>
+                <h3 className='mt-8 text-lg font-medium text-slate-950 group-hover:text-cyan-700'>{project.name}</h3>
+                <p className='mt-2 text-sm leading-6 text-slate-500'>{project.description}</p>
+                <span className='mt-5 inline-flex items-center gap-2 text-xs font-medium text-slate-400 group-hover:text-slate-950'>
+                  <FaGithub /> github.com/Kofiastro/{project.repo}
+                </span>
+              </a>
             ))}
           </div>
         </section>
