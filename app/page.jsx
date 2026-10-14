@@ -343,10 +343,21 @@ export default function Page() {
                 className='h-16 w-[132px] max-w-full object-contain'
               />
             </a>
-            <div className='flex h-20 items-center justify-center rounded-xl border border-dashed border-slate-300 px-4 text-center text-sm text-slate-400'>
-              Partner logo
-              <span className='sr-only'>placeholder — replace with verified logo</span>
-            </div>
+            <a
+              href='https://sikaflo.com/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='flex h-20 items-center justify-center gap-3 rounded-xl border border-slate-200 px-4 transition hover:border-cyan-500 hover:bg-slate-50'
+            >
+              <Image
+                src='/sikaflo.svg'
+                width={148}
+                height={148}
+                alt='Sikaflo logo'
+                className='h-14 w-14 shrink-0 rounded-lg object-contain'
+              />
+              <span className='text-sm font-semibold tracking-tight text-slate-800'>Sikaflo</span>
+            </a>
             <div className='flex h-20 items-center justify-center rounded-xl border border-dashed border-slate-300 px-4 text-center text-sm text-slate-400'>
               Partner logo
               <span className='sr-only'>placeholder — replace with verified logo</span>
