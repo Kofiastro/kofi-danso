@@ -27,62 +27,62 @@ const projects = [
     name: '6lackTech',
     type: 'Technology solutions',
     description:
-      'A technology agency focused on web design, web development, and practical technology solutions.',
+      'A Ghana-based technology agency delivering web design, web development, and tailored digital solutions.',
     href: 'https://www.6lacktech.com/',
   },
   {
     name: 'Sikaflo',
     type: 'Founder-led fintech product',
     description:
-      'A financial tracking product in public beta for individuals and small businesses, with income and expense tracking, real-time profit insights, dashboards, smart categorization, reporting, and automation.',
+      'A financial management platform for individuals and small businesses, combining income and expense tracking with reporting and business insights.',
     href: 'https://sikaflo.com/',
   },
   {
     name: 'Energy Analytics & Sustainability Reporting Platform',
     type: 'Analytics & sustainability',
     description:
-      'A public project focused on energy analytics and sustainability reporting.',
+      'A platform for monitoring energy performance and presenting sustainability data through clear, actionable reports.',
     href: 'https://energy-analytics-sustainability-rep.vercel.app/#/',
   },
   {
     name: 'KELANDREWS',
     type: 'Product website',
     description:
-      'A product-focused web experience for the KELANDREWS ENERGY MASTER DEVICE.',
+      'A product website presenting the KELANDREWS ENERGY MASTER DEVICE and its key features.',
     href: 'https://kelandrews.vercel.app/',
   },
   {
     name: 'Frontend Mentor',
     type: 'Frontend practice',
     description:
-      'Real-world interface challenges used to sharpen HTML, CSS, and JavaScript skills.',
+      'A collection of responsive interface challenges built to strengthen HTML, CSS, and JavaScript skills.',
     href: 'https://www.frontendmentor.io/profile/Kofiastro',
   },
   {
     name: 'Vercel Clone',
     type: 'Web development',
-    description: 'An interface recreation of the Vercel website.',
+    description: 'A frontend recreation of the Vercel website, with emphasis on layout and responsive interaction.',
     href: 'https://vercelclone-eight.vercel.app/',
   },
   {
     name: 'Networking infrastructure',
     type: 'IT infrastructure & networking',
     description:
-      'Networking infrastructure work delivered for organizations and teams. Project details and individual case studies will be added here as they are documented.',
+      'Network infrastructure services covering configuration, connectivity, troubleshooting, and ongoing technical support.',
     href: '#contact',
   },
   {
     name: 'Billing system with captive portal',
     type: 'Networking & access management',
     description:
-      'A managed access solution combining billing workflows with a captive portal for controlled network access and user management.',
+      'An access-management system that combines billing workflows, captive-portal authentication, and user administration.',
     href: '#contact',
   },
   {
     name: 'Credit risk analysis',
     type: 'Power BI & Excel',
     description:
-      'A credit-risk project using Power BI and Excel to work with risk data, analysis, and reporting.',
+      'A credit-risk analysis project using Excel and Power BI to organize risk data and communicate findings through reports.',
     href: '#contact',
   },
 ];
@@ -91,19 +91,19 @@ const githubProjects = [
   {
     name: 'Journal Starter',
     repo: 'journal-starter',
-    description: 'A starter project for practicing Python and API skills while building a useful journaling workflow.',
+    description: 'A Python-based journaling application built around API development and structured personal entries.',
     language: 'Python',
   },
   {
     name: 'Networking Lab',
     repo: 'networking-lab',
-    description: 'A hands-on lab for building practical networking skills through guided exercises and experiments.',
+    description: 'A practical lab for studying network configuration, diagnostics, and common administration tasks.',
     language: 'Shell',
   },
   {
     name: 'Linux CTFs',
     repo: 'linux-ctfs',
-    description: 'A collection of Linux capture-the-flag challenges for practicing command-line and systems skills.',
+    description: 'Linux capture-the-flag exercises covering command-line usage, system administration, and problem solving.',
     language: 'Linux',
   },
   {
@@ -115,13 +115,13 @@ const githubProjects = [
   {
     name: 'Vercel Clone',
     repo: 'vercelclone',
-    description: 'A frontend recreation of the Vercel experience, focused on layout, interaction, and polish.',
+    description: 'A frontend recreation of the Vercel interface, focused on responsive layout and interaction details.',
     language: 'TypeScript',
   },
   {
     name: 'Devjobs Web App',
     repo: 'Devjobs-Web-app',
-    description: 'A responsive job listings interface built to practice product UI development and filtering.',
+    description: 'A responsive job-listings interface with filtering and a product-focused user experience.',
     language: 'JavaScript',
   },
 ];
@@ -131,19 +131,19 @@ const capabilities = [
     number: '01',
     title: 'Software engineering',
     description:
-      'Responsive websites and product interfaces built with clean, maintainable frontend code.',
+      'Responsive websites and product interfaces built with maintainable frontend code.',
   },
   {
     number: '02',
     title: 'Infrastructure & networking',
     description:
-      'Practical technology support across the systems, connectivity, and digital foundations teams rely on.',
+      'Network and systems support covering connectivity, configuration, and the infrastructure teams depend on.',
   },
   {
     number: '03',
     title: 'Technology solutions',
     description:
-      'A delivery mindset that connects business needs, design decisions, and dependable implementation.',
+      'Technology delivery that connects business requirements with clear design and reliable implementation.',
   },
 ];
 
@@ -213,7 +213,7 @@ export default function Page() {
               Building the digital systems that move work forward.
             </h1>
             <p className='mt-8 max-w-xl text-lg leading-8 text-slate-500'>
-              I&apos;m Kofi Danso Amakye — a software engineer, IT infrastructure and networking professional, and technology solutions builder. I turn ideas into useful, dependable digital experiences.
+              I&apos;m Kofi Danso Amakye, a software engineer and IT infrastructure professional who builds dependable digital products and technology solutions.
             </p>
             <div className='mt-9 flex flex-wrap items-center gap-4'>
               <a
@@ -226,7 +226,7 @@ export default function Page() {
                 Let&apos;s work together <MdKeyboardArrowRight className='text-lg' />
               </a>
               <a href='#work' className='text-sm font-medium text-slate-600 underline decoration-slate-300 underline-offset-8 transition hover:text-slate-950'>
-                See selected work
+                View my work
               </a>
             </div>
           </div>
@@ -274,11 +274,11 @@ export default function Page() {
             </div>
             <div className='mt-12 grid gap-10 md:grid-cols-[1fr_0.8fr]'>
               <p className='max-w-2xl text-xl leading-8 text-slate-300'>
-                Leading the technology direction of a Ghana-based agency focused on web design, web development, and practical technology solutions.
+                Leading the technology direction of a Ghana-based agency delivering web design, web development, and tailored technology solutions.
               </p>
               <div className='border-l border-white/20 pl-5 text-sm leading-6 text-slate-400'>
-                <p className='text-slate-200'>A case study in progress</p>
-                <p className='mt-2'>The public site is the available reference point for this work. Detailed client outcomes and project metrics are intentionally not stated here.</p>
+                <p className='text-slate-200'>Explore the company</p>
+                <p className='mt-2'>Visit the 6lackTech website to learn more about the agency and its services.</p>
                 <a href='https://www.6lacktech.com/' target='_blank' rel='noopener noreferrer' className='mt-5 inline-flex items-center gap-2 text-sm font-medium text-cyan-300 hover:text-white'>
                   Visit 6lackTech <FaArrowUpRightFromSquare className='text-xs' />
                 </a>
@@ -291,9 +291,8 @@ export default function Page() {
           <div className='flex flex-col gap-5 md:flex-row md:items-center md:justify-between'>
             <div>
               <p className='section-kicker'>Partners &amp; clients</p>
-              <h2 className='mt-2 text-2xl font-semibold tracking-[-0.03em] text-slate-950'>Built around real collaboration.</h2>
+              <h2 className='mt-2 text-2xl font-semibold tracking-[-0.03em] text-slate-950'>Organizations and products I have worked with.</h2>
             </div>
-            <p className='max-w-sm text-sm leading-6 text-slate-500 md:text-right'>This section highlights selected partnerships and client work. Verified brand assets will be added as they become available.</p>
           </div>
           <div className='mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4'>
             <a
@@ -358,20 +357,16 @@ export default function Page() {
               />
               <span className='text-sm font-semibold tracking-tight text-slate-800'>Sikaflo</span>
             </a>
-            <div className='flex h-20 items-center justify-center rounded-xl border border-dashed border-slate-300 px-4 text-center text-sm text-slate-400'>
-              Partner logo
-              <span className='sr-only'>placeholder — replace with verified logo</span>
-            </div>
           </div>
         </section>
 
         <section id='work' className='py-20'>
           <div className='mb-9 flex items-end justify-between gap-5'>
             <div>
-              <p className='section-kicker'>Selected work</p>
-              <h2 className='mt-2 text-3xl font-semibold tracking-[-0.04em] text-slate-950'>Projects, experiments, and shipped ideas.</h2>
+              <p className='section-kicker'>Projects</p>
+              <h2 className='mt-2 text-3xl font-semibold tracking-[-0.04em] text-slate-950'>Selected projects and products.</h2>
             </div>
-            <span className='hidden font-mono text-xs text-slate-400 sm:block'>06 / selected</span>
+            <span className='hidden font-mono text-xs text-slate-400 sm:block'>09 / projects</span>
           </div>
           <div className='divide-y divide-slate-200 border-y border-slate-200'>
             {projects.map((project, index) => (
@@ -393,7 +388,7 @@ export default function Page() {
             <div>
               <p className='section-kicker'>Pinned on GitHub</p>
               <h2 className='mt-2 max-w-2xl text-3xl font-semibold tracking-[-0.04em] text-slate-950'>More of my work on GitHub.</h2>
-              <p className='mt-3 max-w-xl text-sm leading-6 text-slate-500'>A selection of pinned projects covering software, cloud infrastructure, networking, and systems practice.</p>
+              <p className='mt-3 max-w-xl text-sm leading-6 text-slate-500'>Projects spanning software development, cloud infrastructure, networking, and systems administration.</p>
             </div>
             <a href='https://github.com/Kofiastro' target='_blank' rel='noopener noreferrer' className='inline-flex w-fit items-center gap-2 rounded-full bg-slate-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-cyan-700'>
               <FaGithub /> View profile
@@ -425,7 +420,7 @@ export default function Page() {
         <section className='grid gap-10 border-t border-slate-200 py-16 md:grid-cols-[0.7fr_1.3fr]'>
           <div>
             <p className='section-kicker'>Technology stack</p>
-            <h2 className='mt-2 text-2xl font-semibold tracking-[-0.03em] text-slate-950'>Business-minded tools for building, connecting, and improving technology.</h2>
+            <h2 className='mt-2 text-2xl font-semibold tracking-[-0.03em] text-slate-950'>Tools for building and supporting modern technology.</h2>
           </div>
           <div className='grid gap-6 sm:grid-cols-2'>
             {stackGroups.map((group) => (
@@ -444,7 +439,7 @@ export default function Page() {
         <section id='contact' className='rounded-3xl bg-cyan-500 px-7 py-12 sm:px-12 sm:py-16'>
           <p className='font-mono text-xs uppercase tracking-[0.2em] text-cyan-950'>Start a conversation</p>
           <div className='mt-5 flex flex-col justify-between gap-8 md:flex-row md:items-end'>
-            <h2 className='max-w-2xl text-4xl font-semibold leading-tight tracking-[-0.05em] text-slate-950 sm:text-5xl'>Have a system, product, or idea that needs a thoughtful technology partner?</h2>
+            <h2 className='max-w-2xl text-4xl font-semibold leading-tight tracking-[-0.05em] text-slate-950 sm:text-5xl'>Have a system, product, or idea that needs the right technology support?</h2>
             <div className='flex flex-wrap gap-3'>
               <a href={emailHref} target='_blank' rel='noopener noreferrer' aria-label='Email Kofi about a project' className='inline-flex shrink-0 items-center gap-2 rounded-full bg-slate-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-white hover:text-slate-950'>
                 Email Kofi <MdKeyboardArrowRight className='text-lg' />
