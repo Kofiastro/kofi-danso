@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   FaArrowUpRightFromSquare,
   FaGithub,
@@ -195,6 +196,9 @@ export default function Page() {
             <a href='#github' className='transition hover:text-slate-950'>
               GitHub
             </a>
+            <Link href='/homelab' className='transition hover:text-slate-950'>
+              Homelab
+            </Link>
             <a href='#about' className='transition hover:text-slate-950'>
               About
             </a>
