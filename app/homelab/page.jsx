@@ -26,8 +26,12 @@ const hardware = [
 const vms = [
   { name: 'Ubuntu 26.04', purpose: 'Runs all home services' },
   { name: 'Windows 11', purpose: 'Desktop workloads when needed' },
-  { name: 'Windows Server 2022', purpose: 'Windows server lab, managed through MikroTik CHR' },
-  { name: 'MikroTik RouterOS (CHR)', purpose: 'Virtual router managing the Windows Server' },
+  {
+    name: 'Windows Server 2022',
+    purpose: 'Active Directory domain controller; Group Policy secures workstations and domain accounts',
+  },
+  { name: 'MikroTik RouterOS (CHR)', purpose: 'Virtual router' },
+  { name: 'OPNsense', purpose: 'Firewall and gateway between the router and virtual machines' },
 ];
 
 const services = [
@@ -44,6 +48,7 @@ const services = [
 ];
 
 const otherServices = [
+  { name: 'Home Assistant', purpose: 'Home automation platform' },
   { name: 'FluxDown', purpose: 'Download manager' },
   { name: 'Nextcloud', purpose: 'Self-hosted cloud storage' },
   { name: 'FileBrowser', purpose: 'Web-based file manager' },
@@ -130,6 +135,16 @@ export default function HomelabPage() {
             connect through it.
           </p>
           <p className='mt-4 text-slate-600'>
+            <span className='font-medium text-slate-950'>OPNsense WAN & LAN:</span> The WAN interface connects
+            upstream to my router, and the LAN interface serves as the gateway for the homelab. The LAN connects
+            to the managed switch, where OPNsense routes traffic and applies firewall rules for connected devices.
+          </p>
+          <p className='mt-4 text-slate-600'>
+            <span className='font-medium text-slate-950'>VLAN trunking:</span> VLANs and trunk ports are configured
+            on the TP-Link Omada managed switch. The switch carries tagged traffic between the network segments,
+            while OPNsense handles the WAN and LAN interfaces and applies firewall rules.
+          </p>
+          <p className='mt-4 text-slate-600'>
             <span className='font-medium text-slate-950'>Remote access:</span> Tailscale. The lab is on my Tailnet,
             so I can reach Proxmox and every service from anywhere without opening ports on the router.
           </p>
@@ -140,6 +155,18 @@ export default function HomelabPage() {
             height={1024}
             className='mt-6 w-full max-w-md rounded-xl border border-slate-200'
           />
+          <figure className='mt-8'>
+            <Image
+              src='/homelab-opnsense.png'
+              alt='OPNsense dashboard showing WAN, LAN, gateway, and firewall status; addresses and login identifier are blurred'
+              width={1615}
+              height={768}
+              className='w-full rounded-xl border border-slate-200'
+            />
+            <figcaption className='mt-2 text-sm text-slate-500'>
+              OPNsense firewall dashboard. Network addresses and the dashboard login identifier are blurred.
+            </figcaption>
+          </figure>
         </Section>
 
         <Section kicker='03' title='Storage'>
@@ -151,13 +178,15 @@ export default function HomelabPage() {
 
         <Section kicker='04' title='Virtualisation'>
           <p className='mt-4 text-slate-600'>
-            The M720q runs Proxmox VE as the hypervisor. Four VMs run on it: Ubuntu 26.04 hosts all home services,
-            Windows 11 and Windows Server 2022 are there when needed, and a MikroTik RouterOS CHR instance manages
-            the Windows Server.
+            The M720q runs Proxmox VE as the hypervisor. Five VMs run on it: Ubuntu 26.04 hosts home services;
+            Windows 11 is available for desktop workloads; Windows Server 2022 runs Active Directory as a domain
+            controller, with Group Policy configured for workstation and domain-account security; a MikroTik
+            RouterOS CHR VM provides virtual routing; and OPNsense provides the firewall and gateway between the
+            router and the VMs.
           </p>
           <Image
             src='/homelab-proxmox.png'
-            alt='Proxmox VE dashboard showing four running virtual machines'
+            alt='Proxmox VE dashboard showing four virtual machines before OPNsense was added'
             width={1334}
             height={684}
             className='mt-6 w-full rounded-xl border border-slate-200'
@@ -180,10 +209,10 @@ export default function HomelabPage() {
           <Table headers={['Service', 'Purpose']} rows={services.map((s) => [s.name, s.purpose])} />
           <h3 className='mt-10 text-lg font-semibold tracking-tight text-slate-950'>Other Services</h3>
           <Image
-            src='/homelab-other-services.png'
-            alt='Homepage dashboard showing Portainer, FluxDown, Filebrowser, Nextcloud and CodeServer'
-            width={1620}
-            height={330}
+            src='/homelab-other-services-dashboard.png'
+            alt='Homepage dashboard showing FluxDown, Filebrowser, Nextcloud, CodeServer, Home Assistant and Portainer'
+            width={2276}
+            height={768}
             className='mt-6 w-full rounded-xl border border-slate-200'
           />
           <Table headers={['Service', 'Purpose']} rows={otherServices.map((s) => [s.name, s.purpose])} />
