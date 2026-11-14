@@ -244,7 +244,7 @@ export default function Page() {
               priority
             />
             <p className='max-w-xs text-left text-sm leading-6 text-slate-500 md:text-right'>
-              Founder &amp; Technology Lead at <span className='font-medium text-slate-900'>6lackTech</span>, helping ideas become clear, functional technology.
+              Hands-on experience across networking, security, software, and hardware, built through practical projects and my homelab.
             </p>
           </div>
         </section>
@@ -269,24 +269,44 @@ export default function Page() {
 
         <section className='pb-20'>
           <div className='rounded-3xl bg-slate-950 p-7 text-white sm:p-10'>
-            <div className='flex flex-wrap items-start justify-between gap-6'>
-              <div>
-                <p className='font-mono text-xs uppercase tracking-[0.2em] text-cyan-300'>Professional experience</p>
-                <h2 className='mt-4 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl'>6lackTech</h2>
-              </div>
-              <span className='rounded-full border border-white/20 px-3 py-1.5 font-mono text-xs text-slate-300'>Founder / Technology Lead</span>
-            </div>
-            <div className='mt-12 grid gap-10 md:grid-cols-[1fr_0.8fr]'>
-              <p className='max-w-2xl text-xl leading-8 text-slate-300'>
-                Leading the technology direction of a Ghana-based agency delivering web design, web development, and tailored technology solutions.
+            <div>
+              <p className='font-mono text-xs uppercase tracking-[0.2em] text-cyan-300'>Practical skills</p>
+              <h2 className='mt-4 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl'>Experience built by doing.</h2>
+              <p className='mt-4 max-w-3xl text-base leading-7 text-slate-300'>
+                My homelab is a hands-on environment for building and connecting software, networks, hardware, and security systems.
               </p>
-              <div className='border-l border-white/20 pl-5 text-sm leading-6 text-slate-400'>
-                <p className='text-slate-200'>Explore the company</p>
-                <p className='mt-2'>Visit the 6lackTech website to learn more about the agency and its services.</p>
-                <a href='https://www.6lacktech.com/' target='_blank' rel='noopener noreferrer' className='mt-5 inline-flex items-center gap-2 text-sm font-medium text-cyan-300 hover:text-white'>
-                  Visit 6lackTech <FaArrowUpRightFromSquare className='text-xs' />
-                </a>
-              </div>
+            </div>
+            <div className='mt-10 grid gap-4 sm:grid-cols-2'>
+              <article className='rounded-2xl border border-white/10 bg-white/5 p-5'>
+                <h3 className='text-lg font-medium text-white'>Networking</h3>
+                <p className='mt-2 text-sm leading-6 text-slate-300'>
+                  Configure OPNsense WAN and LAN, manage VLANs and trunk ports on a TP-Link Omada switch, and connect segmented homelab networks.
+                </p>
+              </article>
+              <article className='rounded-2xl border border-white/10 bg-white/5 p-5'>
+                <h3 className='text-lg font-medium text-white'>Security</h3>
+                <p className='mt-2 text-sm leading-6 text-slate-300'>
+                  Apply firewall rules and network segmentation, and use Windows Server Active Directory and Group Policy to secure workstations and domain accounts.
+                </p>
+              </article>
+              <article className='rounded-2xl border border-white/10 bg-white/5 p-5'>
+                <h3 className='text-lg font-medium text-white'>Software</h3>
+                <p className='mt-2 text-sm leading-6 text-slate-300'>
+                  Build web applications and interfaces with JavaScript, React, Next.js, HTML, CSS, and Tailwind CSS.
+                </p>
+              </article>
+              <article className='rounded-2xl border border-white/10 bg-white/5 p-5'>
+                <h3 className='text-lg font-medium text-white'>Hardware &amp; systems</h3>
+                <p className='mt-2 text-sm leading-6 text-slate-300'>
+                  Run a Proxmox homelab on a Lenovo ThinkCentre, working with virtual machines, storage, Linux, Windows, and network services.
+                </p>
+              </article>
+              <article className='rounded-2xl border border-white/10 bg-white/5 p-5'>
+                <h3 className='text-lg font-medium text-white'>Enterprise solutions</h3>
+                <p className='mt-2 text-sm leading-6 text-slate-300'>
+                  Design and connect reliable technology solutions that bring together networking, security, software, and systems to meet organizational needs.
+                </p>
+              </article>
             </div>
           </div>
         </section>

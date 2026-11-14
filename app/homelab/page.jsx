@@ -116,6 +116,20 @@ export default function HomelabPage() {
           </p>
         </section>
 
+        <figure className='mb-12'>
+          <Image
+            src='/homelab-topology-updated.svg'
+            alt='Homelab and neighborhood network topology showing the fiber router, managed switch, OPNsense firewall, VLANs, Proxmox virtual machines, and neighborhood links'
+            width={1478}
+            height={1192}
+            unoptimized
+            className='w-full rounded-xl border border-slate-200'
+          />
+          <figcaption className='mt-2 text-sm text-slate-500'>
+            Homelab and neighborhood network topology.
+          </figcaption>
+        </figure>
+
         <Section kicker='01' title='Hardware'>
           <p className='mt-4 text-slate-600'>
             A compact Lenovo ThinkCentre M720q running Proxmox VE does the heavy lifting, hosting every virtual
