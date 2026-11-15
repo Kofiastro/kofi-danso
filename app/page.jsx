@@ -228,13 +228,13 @@ export default function Page() {
         <section id='top' className='grid gap-12 pb-24 pt-16 md:grid-cols-[1.2fr_0.8fr] md:items-end md:pt-24'>
           <div>
             <p className='mb-6 font-mono text-xs uppercase tracking-[0.25em] text-cyan-700'>
-              Software Engineer · Accra, Ghana
+              Systems Engineer · Accra, Ghana
             </p>
             <h1 className='max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.06em] text-slate-950 sm:text-7xl'>
               Building the digital systems that move work forward.
             </h1>
             <p className='mt-8 max-w-xl text-lg leading-8 text-slate-500'>
-              I&apos;m Kofi Danso Amakye, a software engineer and IT infrastructure professional who builds dependable digital products and technology solutions.
+              I&apos;m Kofi Danso Amakye, a systems engineer and IT infrastructure professional who builds dependable digital products and technology solutions.
             </p>
             <div className='mt-9 flex flex-wrap items-center gap-4'>
               <a

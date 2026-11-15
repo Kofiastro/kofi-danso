@@ -9,9 +9,9 @@ const inter = Inter({
 
 
 export const metadata = {
-  title: "Kofi Danso Amakye — Software Engineer & Technology Lead",
+  title: "Kofi Danso Amakye — Systems Engineer & Technology Lead",
   description:
-    "Portfolio of Kofi Danso Amakye, a software engineer and Founder / Technology Lead at 6lackTech.",
+    "Portfolio of Kofi Danso Amakye, a systems engineer and Founder / Technology Lead at 6lackTech.",
   icons: {
     icon: "/icon.svg",
   },
