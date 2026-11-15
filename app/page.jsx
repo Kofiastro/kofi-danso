@@ -76,8 +76,8 @@ const projects = [
     name: 'Billing system with captive portal',
     type: 'Networking & access management',
     description:
-      'An access-management system that combines billing workflows, captive-portal authentication, and user administration.',
-    href: '#contact',
+      'A fiber-powered Wi-Fi setup using Centipid, MikroTik, and Paystack for paid internet access.',
+    href: '/billing-captive-portal',
   },
   {
     name: 'Credit risk analysis',
@@ -167,14 +167,28 @@ const stackGroups = [
   },
 ];
 
-function ExternalLink({ href }) {
+function ProjectLink({ href, name }) {
+  const className = 'inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 text-slate-500 transition hover:border-slate-900 hover:bg-slate-900 hover:text-white';
+
+  if (href.startsWith('/')) {
+    return (
+      <Link
+        href={href}
+        aria-label={`View ${name}`}
+        className={`${className} after:absolute after:inset-0`}
+      >
+        <MdKeyboardArrowRight className='text-lg' />
+      </Link>
+    );
+  }
+
   return (
     <a
       href={href}
       target='_blank'
       rel='noopener noreferrer'
-      aria-label='Open project'
-      className='inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 text-slate-500 transition hover:border-slate-900 hover:bg-slate-900 hover:text-white'
+      aria-label={`Open ${name}`}
+      className={className}
     >
       <FaArrowUpRightFromSquare className='text-xs' />
     </a>
@@ -185,11 +199,11 @@ export default function Page() {
   return (
     <main className='overflow-hidden'>
       <div className='mx-auto max-w-6xl px-6 py-6 sm:px-10 lg:px-12'>
-        <header className='flex items-center justify-between border-b border-slate-200 pb-5'>
+        <header className='flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-5'>
           <a href='#top' className='font-mono text-sm font-semibold tracking-tight'>
             KD<span className='text-cyan-600'>.</span>
           </a>
-          <nav aria-label='Main navigation' className='flex items-center gap-5 text-sm text-slate-500'>
+          <nav aria-label='Main navigation' className='flex flex-wrap items-center gap-x-5 gap-y-3 text-sm text-slate-500'>
             <a href='#work' className='transition hover:text-slate-950'>
               Work
             </a>
@@ -198,6 +212,9 @@ export default function Page() {
             </a>
             <Link href='/homelab' className='transition hover:text-slate-950'>
               Homelab
+            </Link>
+            <Link href='/billing-captive-portal' className='transition hover:text-slate-950'>
+              Billing &amp; Portal
             </Link>
             <a href='#about' className='transition hover:text-slate-950'>
               About
@@ -394,14 +411,14 @@ export default function Page() {
           </div>
           <div className='divide-y divide-slate-200 border-y border-slate-200'>
             {projects.map((project, index) => (
-              <article key={project.name} className='grid gap-4 py-6 sm:grid-cols-[70px_1fr_auto] sm:items-center'>
+              <article key={project.name} className='relative grid gap-4 py-6 sm:grid-cols-[70px_1fr_auto] sm:items-center'>
                 <p className='font-mono text-xs text-slate-400'>0{index + 1}</p>
                 <div>
                   <p className='font-mono text-xs uppercase tracking-[0.16em] text-cyan-700'>{project.type}</p>
                   <h3 className='mt-1 text-xl font-medium text-slate-950'>{project.name}</h3>
                   <p className='mt-1 max-w-2xl text-sm leading-6 text-slate-500'>{project.description}</p>
                 </div>
-                <ExternalLink href={project.href} />
+                <ProjectLink href={project.href} name={project.name} />
               </article>
             ))}
           </div>
