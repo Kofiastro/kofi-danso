@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import Link from 'next/link';
+import ImageFrame from '../components/ImageFrame';
 
 export const metadata = {
   title: 'Billing & Captive Portal — Kofi Danso Amakye',
@@ -12,30 +12,6 @@ const setup = [
   { number: '02', title: 'MikroTik router', description: 'Connects the fiber service to the Wi-Fi network.' },
   { number: '03', title: 'Two access points', description: 'Provide wireless coverage for users to connect.' },
 ];
-
-function Screenshot({ src, alt, width, height, label, caption }) {
-  return (
-    <figure>
-      <div className='overflow-hidden rounded-2xl border border-slate-200 bg-slate-900 p-2 shadow-xl shadow-slate-900/10 sm:p-3'>
-        <div className='flex items-center gap-1.5 px-2 pb-3 pt-1' aria-hidden='true'>
-          <span className='h-2 w-2 rounded-full bg-slate-500' />
-          <span className='h-2 w-2 rounded-full bg-slate-600' />
-          <span className='h-2 w-2 rounded-full bg-slate-700' />
-          <span className='ml-3 font-mono text-[10px] uppercase tracking-widest text-slate-400'>{label}</span>
-        </div>
-        <Image
-          src={src}
-          alt={alt}
-          width={width}
-          height={height}
-          className='h-auto w-full rounded-lg'
-          sizes='(max-width: 1024px) 100vw, 896px'
-        />
-      </div>
-      <figcaption className='mt-3 text-sm leading-6 text-slate-500'>{caption}</figcaption>
-    </figure>
-  );
-}
 
 export default function BillingCaptivePortalPage() {
   return (
@@ -68,7 +44,7 @@ export default function BillingCaptivePortalPage() {
           </div>
         </section>
 
-        <Screenshot
+        <ImageFrame
           src='/billing-overview.png'
           alt='Centipid billing dashboard showing revenue, subscriptions, online users and network activity'
           width={1509}
@@ -111,7 +87,7 @@ export default function BillingCaptivePortalPage() {
             The Centipid network map provides a view of routers and access points, making it easier to see
             device status across the network.
           </p>
-          <Screenshot
+          <ImageFrame
             src='/billing-network-map.png'
             alt='Centipid network map showing routers, access points and their online status'
             width={1398}

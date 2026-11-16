@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import Link from 'next/link';
+import ImageFrame from '../components/ImageFrame';
 
 export const metadata = {
   title: 'Homelab — Kofi Danso Amakye',
@@ -116,19 +116,16 @@ export default function HomelabPage() {
           </p>
         </section>
 
-        <figure className='mb-12'>
-          <Image
-            src='/homelab-topology-updated.svg'
-            alt='Homelab and neighborhood network topology showing the fiber router, managed switch, OPNsense firewall, VLANs, Proxmox virtual machines, and neighborhood links'
-            width={1478}
-            height={1192}
-            unoptimized
-            className='w-full rounded-xl border border-slate-200'
-          />
-          <figcaption className='mt-2 text-sm text-slate-500'>
-            Homelab and neighborhood network topology.
-          </figcaption>
-        </figure>
+        <ImageFrame
+          src='/homelab-topology-updated.svg'
+          alt='Homelab and neighborhood network topology showing the fiber router, managed switch, OPNsense firewall, VLANs, Proxmox virtual machines, and neighborhood links'
+          width={1478}
+          height={1192}
+          label='Network topology'
+          caption='Homelab and neighborhood network topology.'
+          unoptimized
+          className='mb-12'
+        />
 
         <Section kicker='01' title='Hardware'>
           <p className='mt-4 text-slate-600'>
@@ -162,25 +159,24 @@ export default function HomelabPage() {
             <span className='font-medium text-slate-950'>Remote access:</span> Tailscale. The lab is on my Tailnet,
             so I can reach Proxmox and every service from anywhere without opening ports on the router.
           </p>
-          <Image
+          <ImageFrame
             src='/homelab-network.png'
             alt='TP-Link Omada ES205GP switch sitting on the Lenovo ThinkCentre M720q'
             width={768}
             height={1024}
-            className='mt-6 w-full max-w-md rounded-xl border border-slate-200'
+            label='Homelab hardware'
+            className='mt-6 max-w-md'
+            sizes='(max-width: 448px) 100vw, 448px'
           />
-          <figure className='mt-8'>
-            <Image
-              src='/homelab-opnsense.png'
-              alt='OPNsense dashboard showing WAN, LAN, gateway, and firewall status; addresses and login identifier are blurred'
-              width={1615}
-              height={768}
-              className='w-full rounded-xl border border-slate-200'
-            />
-            <figcaption className='mt-2 text-sm text-slate-500'>
-              OPNsense firewall dashboard. Network addresses and the dashboard login identifier are blurred.
-            </figcaption>
-          </figure>
+          <ImageFrame
+            src='/homelab-opnsense.png'
+            alt='OPNsense dashboard showing WAN, LAN, gateway, and firewall status; addresses and login identifier are blurred'
+            width={1615}
+            height={768}
+            label='OPNsense dashboard'
+            caption='OPNsense firewall dashboard. Network addresses and the dashboard login identifier are blurred.'
+            className='mt-8'
+          />
         </Section>
 
         <Section kicker='03' title='Storage'>
@@ -198,12 +194,13 @@ export default function HomelabPage() {
             RouterOS CHR VM provides virtual routing; and OPNsense provides the firewall and gateway between the
             router and the VMs.
           </p>
-          <Image
+          <ImageFrame
             src='/homelab-proxmox.png'
             alt='Proxmox VE dashboard showing four virtual machines before OPNsense was added'
             width={1334}
             height={684}
-            className='mt-6 w-full rounded-xl border border-slate-200'
+            label='Proxmox VE'
+            className='mt-6'
           />
           <Table headers={['VM / OS', 'Purpose']} rows={vms.map((v) => [v.name, v.purpose])} />
         </Section>
@@ -213,21 +210,23 @@ export default function HomelabPage() {
             Requests come in through Seerr, Radarr, Sonarr and Lidarr pick them up, Prowlarr finds sources, the
             downloaders fetch them, and Jellyfin serves the library.
           </p>
-          <Image
+          <ImageFrame
             src='/homelab-media-stack.png'
             alt='Homepage dashboard showing the media stack: Jellyfin, Seerr, Sonarr, Prowlarr, Lidarr, qBittorrent, Radarr and Bazarr'
             width={1504}
             height={560}
-            className='mt-6 w-full rounded-xl border border-slate-200'
+            label='Media stack'
+            className='mt-6'
           />
           <Table headers={['Service', 'Purpose']} rows={services.map((s) => [s.name, s.purpose])} />
           <h3 className='mt-10 text-lg font-semibold tracking-tight text-slate-950'>Other Services</h3>
-          <Image
+          <ImageFrame
             src='/homelab-other-services-dashboard.png'
             alt='Homepage dashboard showing FluxDown, Filebrowser, Nextcloud, CodeServer, Home Assistant and Portainer'
             width={2276}
             height={768}
-            className='mt-6 w-full rounded-xl border border-slate-200'
+            label='Other services'
+            className='mt-6'
           />
           <Table headers={['Service', 'Purpose']} rows={otherServices.map((s) => [s.name, s.purpose])} />
         </Section>
